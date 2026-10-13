@@ -1,0 +1,1 @@
+# Read N and a, validate inputs, check (gcd(a,N)=1).

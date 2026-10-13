@@ -1,0 +1,18 @@
+
+# Quantum circuit framework
+qiskit==2.5.0
+
+# Quantum circuit simulator
+qiskit-aer==0.17.2
+
+# Numerical computations
+numpy==2.2.6
+
+# Plotting and visualization
+matplotlib==3.10.8
+
+# Classical number theory and mathematics
+sympy==1.14.0
+
+# Optional: Jupyter notebook environment
+jupyter==1.1.1

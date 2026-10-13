@@ -1,0 +1,1 @@
+# Calculate modular powers and the reference order r
