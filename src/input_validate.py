@@ -12,7 +12,7 @@ def get_inputs():
 
     # Get the composite integer N
     try:
-        N = int(input("Enter the composite integer N "))
+        N = int(input("Enter the composite integer N:  "))
     except ValueError:
         raise ValueError("N must be a valid integer.")
 
@@ -22,7 +22,7 @@ def get_inputs():
 
     # Get the base a
     try:
-        a = int(input("Enter the base a"))
+        a = int(input("Enter the base a:  "))
     except ValueError:
         raise ValueError("a must be a valid integer.")
 

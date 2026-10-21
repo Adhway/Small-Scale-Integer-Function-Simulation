@@ -39,3 +39,44 @@ Virtual Environment Commands-
 
 After this install dependencies in venv using-
 pip install -r requirements.txt 
+## Running Phases 1-6
+
+From the project directory, install dependencies and run:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe src/main.py
+```
+
+For a reproducible N=15, a=2 demonstration without input prompts:
+
+```powershell
+.\.venv\Scripts\python.exe src/main.py --defaults --shots 2048 --seed 42
+```
+
+The modular workflow prepares the work register in |1>, applies controlled
+modular multiplication, inverse QFT, and measures the counting register in Aer.
+Continued-fraction denominators from nonzero measurements are combined and
+verified to estimate the order. GCD postprocessing then attempts factor extraction.
+The classical Phase 2 reference is used only for comparison, never for inference.
+Unsuccessful order recovery and unsuitable bases are reported explicitly.
+
+The latest run writes these files to the project `results/` directory:
+- `quantum_circuit.png`: Phase 3 circuit.
+- `measurement_histogram.png`: Phase 4 measured counts.
+- `experiment_results.csv`: one row per observed bitstring, inputs, classical
+  reference, frequencies, estimated order, factors, and status.
+- `run_log.txt`: parameters, library versions, timing, circuit details,
+  measurements, and Phase 5/6 results.
+
+These outputs cover the whole workflow, not just Phases 1 and 2. Each run
+replaces the four files; use `--results-dir results/run_name` to retain separate runs.
+CSV bitstrings should be imported as text in spreadsheet applications to retain
+leading zeros. Counts and measured integers are also included.
+
+This educational implementation uses dense permutation matrices and an ideal
+statevector simulator: N <= 32 and 1-10 counting qubits. Work-register width is
+computed from N; the legacy WORK_QUBITS setting is not used. The default eight
+counting qubits suffice for N=15; use `--count-qubits 10` for larger examples.
+The original `shor_demo.py` remains a separate legacy demonstration; use
+`src/main.py` for the modular workflow and these output files.

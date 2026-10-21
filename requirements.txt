@@ -16,3 +16,6 @@ sympy==1.14.0
 
 # Optional: Jupyter notebook environment
 jupyter==1.1.1
+
+# Matplotlib quantum circuit rendering
+pylatexenc==2.11
