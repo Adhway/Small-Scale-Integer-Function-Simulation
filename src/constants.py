@@ -1,0 +1,1 @@
+# Here We will define the constants that we will do for the actual algorithm
