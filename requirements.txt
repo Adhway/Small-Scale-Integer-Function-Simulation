@@ -19,3 +19,7 @@ jupyter==1.1.1
 
 # Matplotlib quantum circuit rendering
 pylatexenc==2.11
+
+# Web frontend
+streamlit>=1.40,<2.0
+pandas>=2.0,<4.0
