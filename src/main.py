@@ -1,4 +1,4 @@
-"""Run the existing input/baseline stages followed by Phases 3 and 4."""
+# Run the existing input/baseline stages followed by Phases 3 and 4.
 import argparse
 
 if __package__:

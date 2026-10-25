@@ -1,4 +1,4 @@
-"""Phase 6: classical factor extraction from a verified even order."""
+# Phase 6: classical factor extraction from a verified even order.
 from math import gcd
 
 

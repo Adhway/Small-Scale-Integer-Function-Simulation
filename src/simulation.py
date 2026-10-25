@@ -1,4 +1,4 @@
-"""Phase 4: execute in Aer and save raw measurements and run artifacts."""
+# Phase 4: execute in Aer and save raw measurements and run artifacts.
 import csv
 from datetime import datetime, timezone
 from pathlib import Path
@@ -25,7 +25,7 @@ else:
 
 def run_simulation(circuit, N, a, classical_order, shots=2048, seed=42,
                    results_dir=DEFAULT_RESULTS):
-    """Save the latest execution, including Phases 5 and 6 postprocessing."""
+    # Save the latest execution, including Phases 5 and 6 postprocessing.
     if shots <= 0:
         raise ValueError("Shots must be a positive integer.")
     output = Path(results_dir)

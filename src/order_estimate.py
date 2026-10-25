@@ -1,14 +1,10 @@
-"""Phase 5: recover an order from continued-fraction measurement candidates."""
+# Phase 5: recover an order from continued-fraction measurement candidates.
 from fractions import Fraction
 from math import lcm
 
 
 def estimate_order(counts, a, N, count_qubits):
-    """Combine measured denominators; never search from the zero outcome.
-
-    A sample can reveal a divisor of the order. LCMs combine information
-    from different samples, and modular arithmetic verifies every result.
-    """
+    # Combine measured denominators; never search from the zero outcome.
     candidates = {1}
     evidence = []
     scale = 1 << count_qubits

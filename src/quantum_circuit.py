@@ -1,4 +1,4 @@
-"""Phase 3: exact small-integer modular arithmetic and inverse QFT."""
+# Phase 3: exact small-integer modular arithmetic and inverse QFT.
 from math import gcd
 
 import numpy as np
